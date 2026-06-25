@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EVORIA | Sistema de Logística y Planificación de Eventos</title>
+    <link rel="icon" type="image/png" href="logoevoria-removebg-preview.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+<base target="_blank">
+</head>
+<body>
+
+   <!-- NAV -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="logoevoria-removebg-preview.png" alt="EVORIA" class="evoria-logo">
+            <h1>EVORIA</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#que-es">¿Qué es?</a>
+            <a href="#modulos">Módulos</a>
+            <a href="#equipo">Equipo</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <button class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <div class="shape shape-5"></div>
+</div>
+        <div class="hero-content">
+            <h2 class="hero-title">EVORIA</h2>
+            <p class="hero-subtitle">Donde la planificación se convierte en resultados</p>
+            <p class="hero-description">
+                Centraliza la gestión de eventos, recursos, inventario, presupuestos y cronogramas 
+                en una sola plataforma web. Optimiza la toma de decisiones, reduce errores humanos 
+                y mejora la eficiencia operativa en la organización de eventos.
+            </p>
+            <div class="hero-buttons">
+                <a href="#modulos" class="btn btn-primary">Iniciar</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Módulos Principales</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Casos de Uso</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Historias de Usuario</span>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- QUE ES EVORIA -->
+    <section id="que-es" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Sobre el Proyecto</span>
+                <h2 class="section-title">¿Qué es EVORIA?</h2>
+                <p class="section-desc">
+                    EVORIA es un sistema web diseñado para apoyar la planificación y ejecución de eventos, 
+                    permitiendo gestionar recursos humanos, inventario, proveedores, presupuestos y cronogramas de forma organizada.
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Gestión Integral</h3>
+                    <p>Administra eventos, recursos, inventario y presupuestos en una única plataforma centralizada.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Automatización</h3>
+                    <p>Automatiza la asignación de recursos, generación de cronogramas y cálculo de presupuestos.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3>Control de Calidad</h3>
+                    <p>Detecta conflictos de planificación, emite alertas y registra auditoría de cambios.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.21 15.89A10 10 0 118 2.83"/>
+                            <path d="M22 12A10 10 0 0012 2v10z"/>
+                        </svg>
+                    </div>
+                    <h3>Toma de Decisiones</h3>
+                    <p>Proporciona información oportuna y reportes para optimizar la toma de decisiones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEMA Y SOLUCION -->
+    <section class="section problem-solution">
+        <div class="container">
+            <div class="ps-grid">
+                <div class="ps-card problem">
+                    <span class="ps-tag problem-tag">Problema Identificado</span>
+                    <h3>¿Por qué EVORIA?</h3>
+                    <ul class="ps-list">
+                        <li><span class="ps-bullet">×</span> Mala planificación del tiempo</li>
+                        <li><span class="ps-bullet">×</span> Asignación ineficiente de recursos</li>
+                        <li><span class="ps-bullet">×</span> Falta de control en costos y presupuesto</li>
+                        <li><span class="ps-bullet">×</span> Errores humanos recurrentes en la logística</li>
+                        <li><span class="ps-bullet">×</span> Falta de coordinación entre equipos</li>
+                    </ul>
+                </div>
+                <div class="ps-card solution">
+                    <span class="ps-tag solution-tag">Nuestra Solución</span>
+                    <h3>Beneficios de EVORIA</h3>
+                    <ul class="ps-list">
+                        <li><span class="ps-bullet">✓</span> Planificación automatizada de actividades</li>
+                        <li><span class="ps-bullet">✓</span> Asignación eficiente de recursos humanos y materiales</li>
+                        <li><span class="ps-bullet">✓</span> Control total de costos y presupuestos</li>
+                        <li><span class="ps-bullet">✓</span> Reducción de errores mediante validaciones</li>
+                        <li><span class="ps-bullet">✓</span> Coordinación centralizada entre equipos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULOS -->
+    <section id="modulos" class="section modules">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Funcionalidades</span>
+                <h2 class="section-title">Módulos del Sistema</h2>
+                <p class="section-desc">
+                    EVORIA integra seis módulos principales diseñados para cubrir todas las necesidades 
+                    de logística y planificación de eventos.
+                </p>
+            </div>
+            <div class="modules-grid">
+                <div class="module-card" data-module="eventos">
+                    <div class="module-number">01</div>
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3>Gestión de Eventos</h3>
+                    <p>Creación, configuración y seguimiento de eventos con estados en tiempo real.</p>
+                    <div class="module-features">
+                        <span>Registrar eventos</span>
+                        <span>Estados: Pendiente, En proceso, Finalizado</span>
+                        <span>Validación de fechas</span>
+                    </div>
+                </div>
+                <div class="module-card" data-module="recursos">
+                    <div class="module-number">02</div>
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Recursos Humanos</h3>
+                    <p>Asignación y control de personal según disponibilidad y perfil.</p>
+                    <div class="module-features">
+                        <span>Asignación automática</span>
+                        <span>Validación de disponibilidad</span>
+                        <span>Control de perfiles</span>
+                    </div>
+                </div>
+                <div class="module-card" data-module="inventario">
+                    <div class="module-number">03</div>
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Inventario</h3>
+                    <p>Control de recursos materiales, cantidades disponibles y ubicación física.</p>
+                    <div class="module-features">
+                        <span>Stock en tiempo real</span>
+                        <span>Alertas de faltantes</span>
+                        <span>Ubicación física</span>
+                    </div>
+                </div>
+                <div class="module-card" data-module="presupuestos">
+                    <div class="module-number">04</div>
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Presupuestos</h3>
+                    <p>Cálculo automático de costos estimados y reales basado en recursos asignados.</p>
+                    <div class="module-features">
+                        <span>Cálculo automático</span>
+                        <span>Costo estimado vs real</span>
+                        <span>Reportes en PDF</span>
+                    </div>
+                </div>
+                <div class="module-card" data-module="cronogramas">
+                    <div class="module-number">05</div>
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>Cronogramas</h3>
+                    <p>Generación automática de actividades y horarios para la ejecución del evento.</p>
+                    <div class="module-features">
+                        <span>Generación automática</span>
+                        <span>Detección de conflictos</span>
+                        <span>Visualización clara</span>
+                    </div>
+                </div>
+                <div class="module-card" data-module="alertas">
+                    <div class="module-number">06</div>
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>Alertas y Reportes</h3>
+                    <p>Notificaciones de conflictos, reportes en PDF y auditoría de cambios.</p>
+                    <div class="module-features">
+                        <span>Alertas en tiempo real</span>
+                        <span>Exportación PDF</span>
+                        <span>Trazabilidad completa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS DE USO -->
+    <section class="section usecases">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Interacciones</span>
+                <h2 class="section-title">Casos de Uso Principales</h2>
+            </div>
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <span class="usecase-code">CU-01</span>
+                    <h3>Iniciar Sesión</h3>
+                    <p>Autenticación mediante correo y contraseña con validación de credenciales.</p>
+                    <span class="usecase-actor">👤 Administrador / Coordinador</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="usecase-code">CU-02</span>
+                    <h3>Crear Evento</h3>
+                    <p>Registro de nuevos eventos con nombre, fecha, ubicación y tipo.</p>
+                    <span class="usecase-actor">👤 Coordinador de Eventos</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="usecase-code">CU-03</span>
+                    <h3>Asignar Recursos</h3>
+                    <p>Asignación de recursos humanos y materiales según disponibilidad.</p>
+                    <span class="usecase-actor">👤 Administrador</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="usecase-code">CU-04</span>
+                    <h3>Gestionar Inventario</h3>
+                    <p>Consulta y actualización de recursos disponibles en tiempo real.</p>
+                    <span class="usecase-actor">👤 Administrador</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="usecase-code">CU-05</span>
+                    <h3>Generar Presupuesto</h3>
+                    <p>Cálculo automático de costos basado en recursos asignados.</p>
+                    <span class="usecase-actor">👤 Coordinador de Eventos</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="usecase-code">CU-06</span>
+                    <h3>Generar Cronograma</h3>
+                    <p>Organización automática de actividades y horarios del evento.</p>
+                    <span class="usecase-actor">👤 Coordinador de Eventos</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="usecase-code">CU-07</span>
+                    <h3>Emitir Alertas</h3>
+                    <p>Detección de conflictos y notificaciones automáticas al usuario.</p>
+                    <span class="usecase-actor">⚙️ Sistema</span>
+                </div>
+                <div class="usecase-card">
+                    <span class="usecase-code">CU-08</span>
+                    <h3>Generar Reportes</h3>
+                    <p>Exportación de informes en PDF sobre eventos, recursos y presupuestos.</p>
+                    <span class="usecase-actor">👤 Administrador</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section id="equipo" class="section team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nosotros</span>
+                <h2 class="section-title">Equipo de Trabajo</h2>
+                <p class="section-desc">Proyecto académico desarrollado por estudiantes del SENA</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">SG</div>
+                    <h3>Salomé García Calle</h3>
+                    <span class="team-role">Líder del Proyecto</span>
+                    <span class="team-role">Frontend Developer</span>
+                    <p>Coordinación del equipo, diseño y desarrollo de interfaces de usuario.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">EC</div>
+                    <h3>Esthefany Chávez Parra</h3>
+                    <span class="team-role">Backend Developer</span>
+                    <p>Lógica de negocio, diseño de base de datos y desarrollo de la API REST.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">AM</div>
+                    <h3>Adrián Martínez Dulcey</h3>
+                    <span class="team-role">Analista</span>
+                    <p>Recopilación de requerimientos y documentación técnica y funcional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Conecta</span>
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-desc">¿Tienes preguntas sobre el proyecto EVORIA?</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Líder del Proyecto</span>
+                        <span class="contact-value">Salomé García Calle</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Correo Electrónico</span>
+                        <span class="contact-value">mgarcia06calle@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Institución</span>
+                        <span class="contact-value">Servicio Nacional de Aprendizaje - SENA</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Periodo</span>
+                        <span class="contact-value">Junio - Noviembre 2026</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" target="_blank">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>EVORIA</h3>
+                    <p>Sistema de Logística y Planificación de Eventos</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#modulos">Módulos</a>
+                    <a href="#equipo">Equipo</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>EVORIA © 2026 - Proyecto Académico SENA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <!-- Failsafe: Smooth scrolling works even if script.js fails to load -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
