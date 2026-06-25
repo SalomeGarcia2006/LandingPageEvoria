@@ -37,7 +37,7 @@
     --warning: #F59E0B;
     
     /* Typography */
-    --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font: times, "Times New Roman", serif;
     
     /* Spacing */
     --space-1: 0.25rem;
@@ -191,7 +191,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================
-   HERO SECTION - GRADIENTE SUAVE
+   HERO SECTION - CON DIFUMINADO AL FINAL
    ============================================ */
 
 .hero {
@@ -203,33 +203,51 @@ img { max-width: 100%; display: block; }
     overflow: hidden;
     padding: 100px 2rem 60px;
     
-    /* GRADIENTE PRINCIPAL: de azul oscuro (arriba) a azul claro (abajo) */
+    /* Gradiente principal: de azul oscuro a azul claro */
     background: linear-gradient(
         180deg,
-        #0A1628 0%,      /* Azul muy oscuro en la parte superior */
-        #0F1F3A 15%,     /* Azul oscuro */
-        #1A2F4A 30%,     /* Azul medio-oscuro */
-        #2A4A6A 45%,     /* Azul medio */
-        #3D6A8A 60%,     /* Azul medio-claro */
-        #5A8AAA 75%,     /* Azul claro */
-        #7AAAC4 88%,     /* Azul más claro */
-        #9AC4DA 100%     /* Azul muy claro en la parte inferior */
+        #0A1628 0%,
+        #0F1F3A 12%,
+        #1A2F4A 28%,
+        #2A4A6A 42%,
+        #3D6A8A 55%,
+        #5A8AAA 68%,
+        #7AAAC4 82%,
+        #9AC4DA 92%,
+        #B8D8EA 100%
     );
-    
-    /* Capa adicional para suavizar el degradado */
-    background-blend-mode: normal;
 }
 
-/* Overlay sutil para dar profundidad sin arruinar el degradado */
+/* MÁSCARA DE DIFUMINADO AL FINAL DEL HERO */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    z-index: 1;
+    background: linear-gradient(
+        180deg,
+        rgba(186, 216, 234, 0) 0%,
+        rgba(200, 225, 240, 0.3) 30%,
+        rgba(220, 235, 245, 0.6) 60%,
+        rgba(240, 248, 250, 0.85) 85%,
+        #F8FAFC 100%
+    );
+    pointer-events: none;
+}
+
+/* Overlay sutil para profundidad */
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
     z-index: 1;
     background: 
-        radial-gradient(ellipse 600px 400px at 30% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 70%),
-        radial-gradient(ellipse 500px 350px at 70% 40%, rgba(139, 92, 246, 0.05) 0%, transparent 60%),
-        radial-gradient(ellipse 400px 300px at 50% 80%, rgba(96, 165, 250, 0.06) 0%, transparent 50%);
+        radial-gradient(ellipse 600px 400px at 30% 20%, rgba(59, 130, 246, 0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 500px 350px at 70% 40%, rgba(139, 92, 246, 0.04) 0%, transparent 60%),
+        radial-gradient(ellipse 400px 300px at 50% 80%, rgba(96, 165, 250, 0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -410,6 +428,41 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================
+   ABOUT SECTION - CON DIFUMINADO DE ENTRADA
+   ============================================ */
+
+.about {
+    background: #F8FAFC;
+    position: relative;
+    padding-top: 4rem;
+}
+
+/* Difuminado de entrada para la sección about */
+.about::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    height: 160px;
+    z-index: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(248, 250, 252, 0) 0%,
+        rgba(248, 250, 252, 0.2) 20%,
+        rgba(248, 250, 252, 0.5) 45%,
+        rgba(248, 250, 252, 0.8) 70%,
+        #F8FAFC 100%
+    );
+    pointer-events: none;
+}
+
+.about .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
    SECTIONS COMMON
    ============================================ */
 
@@ -466,10 +519,6 @@ img { max-width: 100%; display: block; }
    ABOUT SECTION
    ============================================ */
 
-.about {
-    background: var(--white);
-}
-
 .about-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -479,7 +528,7 @@ img { max-width: 100%; display: block; }
 .about-card {
     text-align: center;
     padding: 2rem 1.5rem;
-    background: var(--gray-50);
+    background: var(--white);
     border-radius: var(--radius-lg);
     border: 1px solid var(--gray-200);
     transition: var(--transition);
@@ -1028,6 +1077,10 @@ img { max-width: 100%; display: block; }
     
     .footer-content { flex-direction: column; gap: 1.5rem; text-align: center; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
+    
+    /* Ajustar difuminados en móvil */
+    .hero::after { height: 100px; }
+    .about::before { top: -40px; height: 100px; }
 }
 
 @media (max-width: 640px) {
@@ -1040,4 +1093,7 @@ img { max-width: 100%; display: block; }
     
     .section { padding: 3rem 1.25rem; }
     .section-title { font-size: 2rem; }
+    
+    .hero::after { height: 70px; }
+    .about::before { top: -30px; height: 70px; }
 }
