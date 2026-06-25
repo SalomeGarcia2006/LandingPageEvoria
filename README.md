@@ -1,4 +1,4 @@
-# 📋 README.md - Versión Corta
+# 📋 README.md - Evoria
 
 ```markdown
 # EVORIA - Sistema de Logística y Planificación de Eventos
